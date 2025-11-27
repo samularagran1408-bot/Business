@@ -1,0 +1,539 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html, body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../assets/images/banner-bk.jpg);
+    background-position: center;
+    height: 600px;
+}
+
+.principal nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.principal nav img {
+    width: 5%;
+    height: auto;
+    margin-left: 60px;
+}
+
+.principal nav h3 {
+    margin-right: 60px;
+    font-weight: lighter;
+}
+
+.principal .content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 50%;
+    margin-left: 70px;
+    margin-top: 40px;
+}
+
+.principal .content h1 {
+    width: 50%;
+    font-size: 50px;
+    color: white;
+}
+
+.principal .content p {
+    line-height: 1.6;
+    color: rgb(209, 201, 201);
+}
+
+.principal .content a {
+    height: 40px;
+    width: 15%;
+    background-color: aquamarine;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(21, 21, 75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.principal .content a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px black;
+}
+
+.gradient {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.gradient h1 {
+    color: rgb(21, 21, 75);
+}
+
+.elements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.element p {
+    width: 70%;
+}
+
+.triangular {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Más espacio entre secciones */
+    margin-top: 160px;
+    padding: 20px 340px; /* Espacio en los bordes */
+    position: relative; /* Posiciona elemento en relación con el contenedor */
+}
+
+
+/* PARTE INFERIOR */
+.triangular::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    /* Ajusta el margen cada lado del triangulo aquamarine */
+    left: 0;
+    right: 0;
+    height: 100%; /*  AJUSTA ALTURA DE LA PARTE COLORADA */
+    background: aquamarine; /*  CAMBIA COLOR INFERIOR */
+    z-index: -1; /* El texto queda por encima del color aquamarine */
+    clip-path: polygon(0 60%, 100% 0, 100% 100%, 0% 100%); /*  CONTROL FORMA:  
+    1er valor: arriba-izquierda
+    2do valor: arriba-derecha
+    3er valor: abajo-izquierda
+    4to valor: abajo-derecha*/
+}
+
+.content1 {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between; /* Distribuye espacio */
+    flex-direction: row;
+    gap: 20px; /* Espacio entre texto e imagen */
+}
+
+.content2 {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between; /* Distribuye espacio */
+    flex-direction: row;
+    gap: 60px; /* Espacio entre texto e imagen */
+}
+
+/* ELIMINA todos los márgenes fijos */
+.freature1, .freature2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1; /* Ocupa espacio disponible */
+    max-width: 500px; /* Ancho máximo para el texto */
+}
+
+.freature1 h1, .freature2 h1 {
+    color: rgb(21, 21, 75);
+    font-size: 2.5rem;
+}
+
+.freature1 p, .freature2 p {
+    font-weight: lighter;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    line-height: 1.6;
+}
+
+.freature1 a, .freature2 a {
+    height: 50px;
+    width: 160px; /* Ancho fijo en lugar de porcentaje */
+    background-color: rgb(21, 21, 75);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    align-self: flex-start; /* Alinea a la izquierda */
+}
+
+.freature1 a:hover, .freature2 a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(21, 21, 75, 0.4);
+}
+
+.img img, .img2 img {
+    width: 100%;
+    max-width: 500px; /* Tamaño máximo */
+    height: auto;
+    border-radius: 10px;
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 0 80px 0;
+}
+
+.prices h1 {
+    color: rgb(21, 21, 75);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.pricces {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 0;
+}
+
+.price1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    min-width: 350px;
+    height: 380px;
+}
+
+.h2-h6 {
+    display: flex;
+    flex-direction: row;
+}
+
+.h2-h6 .month {
+    margin-left: 20px;
+    margin-top: 1px;
+    font-weight: bolder;
+    font-size: 1.0rem;
+}
+
+.h2-h6 .ten {
+    margin-left: 20px;
+    margin-top: 1px;
+    font-weight: bolder;
+    font-size: 3.0rem;
+}
+
+.h2-h6 .precio {
+    margin-right: 20px;
+    font-weight: bolder;
+    font-size: 1.0rem;
+}
+
+.price1 h2 {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.price1 h6 {
+    color: #000;
+    font-size: 0.5rem;
+    font-weight: lighter;
+}
+
+.price1 h1 {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    line-height: 1.6;
+}
+
+.price1 ul li {
+    font-size: 0.8rem;
+    color: #000;
+    font-weight: bolder;
+}
+
+.price1 a {
+    height: 50px;
+    width: 160px; /* Ancho fijo en lugar de porcentaje */
+    background-color: #fff;
+    border: 2px solid rgb(21, 21, 75);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(21, 21, 75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.price1 a:hover {
+    transform: translateY(-3px);
+    background-color: aquamarine;
+    box-shadow: 0 5px 15px rgba(21, 21, 75, 0.4);
+}
+
+.price2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(21, 21, 75);
+    min-width: 350px;
+    height: 380px;
+}
+
+.price2 h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.price2 h6 {
+    color: #fff;
+    font-size: 0.5rem;
+    font-weight: lighter;
+}
+
+.price2 h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.price2 ul li {
+    font-size: 0.8rem;
+    font-weight: bolder;
+}
+
+
+.price2 a {
+    height: 50px;
+    width: 160px; /* Ancho fijo en lugar de porcentaje */
+    background-color: aquamarine;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(21, 21, 75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.price2 a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(21, 21, 75, 0.4);
+}
+
+.clients {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #dbdbdb;
+    gap: 20px;
+    padding: 30px 0 30px;
+}
+
+.clients a {
+    transition: all 0.3s ease;
+}
+
+.clients a:hover {
+    transform: scale(1.1);
+}
+
+.forms {
+    display: flex;
+    flex-direction: row;
+    background-image: url(../assets/images/contact-bk.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    padding: 60px 40px;
+}
+
+.forms .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+    padding-right: 40px;
+}
+
+.forms .contact h1 {
+    width: 100%;
+    font-size: 50px;
+    color: white;
+}
+
+.forms .contact p {
+    line-height: 1.6;
+    color: rgb(209, 201, 201);
+    font-size: 18px;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 50%;
+    margin-left: 70px;
+    margin-top: 40px;
+}
+
+.form .input {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.form .input .text {    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    margin: 0;
+}
+
+.form .input .text h3 {
+    color: aquamarine;
+    font-size: 1.5rem;
+}
+
+.form .input .text input {
+    height: 50px;
+    width: 80%;
+    background-color: rgba(127, 255, 212, 0.1);
+    border-radius: 5px;
+    border: 2px solid aquamarine;
+    padding: 0 20x;
+    text-decoration: none;
+    font-weight: bolder;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.form .input .text input:hover {
+    background-color: rgba(127, 255, 212, 0.2); /* ← Un poco más opaco al interactuar */
+    border-color: #7FFFD4;
+    box-shadow: 0 0 10px rgba(127, 255, 212, 0.5);
+}
+
+.form .message {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.form .message h3 {
+    color: aquamarine;
+    font-size: 1.5rem;
+}
+
+.form .message textarea {
+    height: 200px;
+    width: 300px;
+    background-color: rgba(127, 255, 212, 0.1);
+    border: 2px solid aquamarine;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.button a {
+    height: 50px;
+    min-width: 360px; /* Ancho fijo en lugar de porcentaje */
+    background-color: aquamarine;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(21, 21, 75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(21, 21, 75);
+    padding: 40px 0;
+}
+
+.footer h3 {
+    color: #fff;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+    justify-content: space-between;
+    transform: all 0.3s ease;
+}
+
+.social a:hover {
+    transform: translateY(-3px) ;
+}
