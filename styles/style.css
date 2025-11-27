@@ -126,7 +126,9 @@ html, body {
     height: 100%; /*  AJUSTA ALTURA DE LA PARTE COLORADA */
     background: aquamarine; /*  CAMBIA COLOR INFERIOR */
     z-index: -1; /* El texto queda por encima del color aquamarine */
-    clip-path: polygon(0 60%, 100% 0, 100% 100%, 0% 100%); /*  CONTROL FORMA:  
+    clip-path: polygon(0 60%, 100% 0, 100% 100%, 0% 100%);
+    
+    /*  CONTROL FORMA:  
     1er valor: arriba-izquierda
     2do valor: arriba-derecha
     3er valor: abajo-izquierda
@@ -536,4 +538,94 @@ ul {
 
 .social a:hover {
     transform: translateY(-3px) ;
+}
+
+@media (min-width: 921px) and (max-width: 1279px) {
+    .principal .content {
+        width: 70%;
+        padding: 0 40px;
+    }
+
+    .principal .content a {
+        width: 40%;
+    }
+
+    .triangular {
+        width: 100%;
+        align-items: center;
+        padding: 20px 45px;
+    }
+
+    .content1, .content2 {
+        width: 100%;
+        gap: 40px;
+        justify-content: space-between;
+    }
+
+    .freature1, .freature2 {
+        width: 45%; /* Ancho controlado */
+        max-width: 500px;
+        margin: 0; /* Elimina márgenes fijos */
+    }
+
+    .content1 .img img, 
+    .content2 .img2 img {
+        width: 80%; /* Más grande que 50% pero no excesivo */
+        max-width: 400px;
+        height: auto;
+    }
+
+    .triangular::after {
+        clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%);
+        /*  CONTROL FORMA:  
+        1er valor: arriba-izquierda 
+        2do valor: arriba-derecha
+        3er valor: abajo-derecha
+        4to valor: abajo-izquierda*/
+    }
+
+    .prices {
+        width: 100%;
+        align-items: center;
+        padding: 70px 30px;
+    }
+
+    .pricces {
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: nowrap; /* Solo quedan en una fila */
+        margin-right: 60px;
+    }
+
+    .price1, 
+    .price2 {
+        width: 28%; 
+        min-width: 250px; /* Ancho mínimo más pequeño */
+        max-width: 300px; /* Ancho máximo controlado */
+        padding: 25px 20px; /* Reduce padding interno */
+    }
+
+    .clients img {
+        width: 70%;
+    }
+
+    .form .input .text input {
+        height: 40px;
+    }
+
+    .footer {
+        justify-content: space-around;
+        padding: 40px 150px;
+    }
+
+    .footer .social {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        margin-left: 180px;
+    }
+
+    .footer .social img {
+        width: 100%;
+    }
 }
