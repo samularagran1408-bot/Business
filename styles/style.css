@@ -629,3 +629,387 @@ ul {
         width: 100%;
     }
 }
+
+@media (min-width: 769px) and (max-width: 920px) {
+    .principal .content {
+        width: 70%;
+        padding: 0 20px;
+    }
+
+    .principal .content a {
+        width: 40%;
+    }
+
+    .triangular {
+        width: 100%;
+        align-items: center;
+        padding: 20px 15px;
+    }
+
+    .content1, .content2 {
+        width: 90%;
+        gap: 60px;
+        justify-content: center;
+        flex-wrap: wrap; /* Permite el ajuste a múltiples líneas */
+    }
+
+    .freature1, .freature2 {
+        width: 80%; /* Ancho controlado */
+        max-width: 500px;
+        margin: 0; /* Elimina márgenes fijos */
+    }
+
+    .content1 .img img, 
+    .content2 .img2 img {
+        width: 75%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .triangular::after {
+        clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%);
+        /*  CONTROL FORMA:  
+        1er valor: arriba-izquierda 
+        2do valor: arriba-derecha
+        3er valor: abajo-derecha
+        4to valor: abajo-izquierda*/
+    }
+
+    .prices {
+        width: 90%;
+        align-items: center;
+        padding: 70px 40px;
+    }
+
+    .pricces {
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap; /* Permite que los elementos se ajusten en mas lineas si es necesario */
+    }
+
+    .price1, 
+    .price2 {
+        width: 30%; 
+        min-width: 250px; /* Ancho mínimo más pequeño */
+        max-width: 300px; /* Ancho máximo controlado */
+        padding: 25px 0;
+    }
+    
+    .clients {
+        flex-wrap: nowrap; /* Permite que los elementos se ajusten en una sola línea */
+        gap: 10px;
+    }
+
+    .clients img {
+        width: 70%;
+    }
+
+    .form .input .text input {
+        width: 70%;
+        height: 35px;
+        font-size: 1.0rem;
+    }
+
+    .form .message textarea {
+        width: 90%;
+        height: 150px;
+        font-size: 1.0rem;
+    }
+
+    .form .button a {
+        min-width: 250px;
+    }
+
+    .footer {
+        flex-direction: row;
+        gap: 20px;
+        padding: 40px 20px;
+    }
+
+    .footer .social {
+        width: 50%;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .principal .content {
+        width: 70%;
+        padding: 0 20px;
+    }
+
+    .principal .content a {
+        width: 40%;
+    }
+
+    .triangular {
+        width: 100%;
+        align-items: center;
+        padding: 20px 15px;
+    }
+
+    .content1, .content2 {
+        width: 100%;
+        gap: 60px;
+        justify-content: center;
+        flex-wrap: wrap; /* Permite el ajuste a múltiples líneas */
+        padding: 0 20px;
+    }
+
+    .freature1, .freature2 {
+        width: 70%; /* Ancho controlado */
+        max-width: 300px;
+        margin: 0; /* Elimina márgenes fijos */
+    }
+
+    .freature1 {
+        margin-left: 70px;
+    }
+
+    .content1 .img img, 
+    .content2 .img2 img {
+        width: 65%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .triangular::after {
+        clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%);
+        /*  CONTROL FORMA:  
+        1er valor: arriba-izquierda 
+        2do valor: arriba-derecha
+        3er valor: abajo-derecha
+        4to valor: abajo-izquierda*/
+    }
+
+    .prices {
+        width: 100%;
+        align-items: center;
+        padding: 70px 30px;
+    }
+
+    .pricces {
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap; /* Solo quedan en una fila */
+        margin-right: 60px;
+    }
+
+    .price1, 
+    .price2 {
+        width: 22%; 
+        min-width: 250px; /* Ancho mínimo más pequeño */
+        max-width: 300px; /* Ancho máximo controlado */
+        padding: 25px 20px; /* Reduce padding interno */
+    }
+
+    .clients img {
+        width: 70%;
+    }
+
+    .form .input .text input {
+        width: 70%;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .form .message textarea {
+        width: 90%;
+        height: 150px;
+        font-size: 0.9rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer .social {
+        width: 100%;
+        justify-content: center;
+        gap: 1px;
+        margin-left: 180px;
+    }
+
+    .footer .social img {
+        width: 40%;
+        margin-right: 70px;
+    }
+
+    .form .button a {
+        min-width: 220px;
+    }
+}
+
+@media (min-width: 352px) and (max-width: 480px) {
+    .principal {
+        height: 700px;
+    }
+
+    .principal nav {
+        flex-direction: column;
+    }
+
+    .principal nav img {
+        width: 20%;
+    }
+
+    .principal .content {
+        width: 100%;
+    }
+
+    .principal .content h1 {
+        width: 75%;
+        font-size: 160%;
+    }
+
+    .principal .content p {
+        width: 75%;
+        font-size: 100%;
+    }
+
+    .principal .content a {
+        width: 30%;
+    }
+
+    .gradient h1 {
+        font-size: 1.2em;
+    }
+
+    .elements {
+        flex-direction: column;
+    }
+
+    .element p {
+        font-size: 0.8em;
+    }
+
+    .triangular {
+        width: 100%;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .content1, .content2 {
+        width: 50%;
+        gap: 40px;
+        justify-content: center;
+        flex-wrap: wrap; /* Permite el ajuste a múltiples líneas */
+        flex-direction: row;
+        padding: 0 10px;
+    }
+
+    .freature1, .freature2 {
+        width: 90%; /* Ancho controlado */
+        max-width: 300px;
+        margin: 0; /* Elimina márgenes fijos */
+    }
+
+    .freature1 h1, .freature2 h1 {
+        font-size: 1.2rem;
+    }
+
+    .freature1 p, .freature2 p {
+        font-size: 0.8rem;
+    }
+
+    .freature1 a, .freature2 a {
+        width: 60%;
+        font-size: 0.8rem;
+    }
+
+    .content1 .img img, 
+    .content2 .img2 img {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .triangular::after {
+        clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%);
+        /*  CONTROL FORMA:  
+        1er valor: arriba-izquierda 
+        2do valor: arriba-derecha
+        3er valor: abajo-derecha
+        4to valor: abajo-izquierda*/
+    }
+
+    .prices {
+        width: 100%;
+        align-items: center;
+        padding: 70px 20px;
+    }
+
+    .pricces {
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap; /* Solo quedan en una fila */
+        margin-right: 60px;
+    }
+
+    .price1, 
+    .price2 {
+        width: 80%; 
+        min-width: 250px; /* Ancho mínimo más pequeño */
+        max-width: 300px; /* Ancho máximo controlado */
+        padding: 25px 20px; /* Reduce padding interno */
+    }
+
+    .clients {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .clients img {
+        width: 70%;
+    }
+
+    .form .input .text input {
+        width: 90%;
+        height: 25px;
+        font-size: 0.9rem;
+    }
+
+    .form .message textarea {
+        height: 100px;
+        width: 120px;
+    }
+
+    .button a {
+        min-width: 120px;
+    }
+    
+    .forms .contact h1 {
+        font-size: 1.6rem;
+    }
+
+    .forms .contact p {
+        font-size: 0.9rem;
+    }
+
+    .form .input .text h3 {
+        font-size: 1.0rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer .social {
+        width: 100%;
+        justify-content: center;
+        gap: 1px;
+        margin-left: 0;
+    }
+
+    .footer .social img {
+        width: 60%;
+        margin-right: 0;
+    }
+}
